@@ -1,0 +1,55 @@
+:root{
+    --nav-color--:#bcb9ff;
+    --background--:#d5dbff;
+    --color1--:#9cace5;
+    --color2--:#8d84ff;
+    --color3--:#7b75ff;
+    --color4--: #7289da;
+}
+
+#container{
+    margin-top:120px;
+}
+
+#notePad, #allNotes, #done{
+    display: none;
+}
+
+textarea{
+    width: 100%;
+    max-width: 100%;
+    background: url(img/line.png) repeat-y;
+    font: normal 14px verdana;
+    line-height: 25px;
+    padding: 2px 10px;
+    border: solid 1px #ddd;
+    outline: none;
+    border-left-width: 20px;
+    border-color: var(--color2--);
+}
+
+.buttons{
+    margin-bottom:20px;
+}
+
+.btn-custom3{
+    background-color: var(--color1--);
+}
+
+.btn-custom3:hover{
+    background-color: var(--color4--);
+}
+
+.table-style{
+    background-color: var(--color1--);
+}
+
+.h2-style{
+    margin-top:5%;
+    background-color:#d5dbff;
+    padding: 5px;
+}
+
+tr{
+    cursor: pointer;
+}

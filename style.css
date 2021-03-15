@@ -1,0 +1,84 @@
+    /*https://www.color-hex.com/color-palette/106515
+    https://getbootstrap.com/docs/4.6/getting-started/introduction/
+    https://getbootstrap.com/docs/4.6/components/navbar/
+    https://www.youtube.com/watch?v=o4AIxCBOz84&list=PL3eBP-tA85COY-wTzzFAfk2eWcy_as4Jn&index=7
+    8:26
+    */
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+:root{
+    --nav-color--:#bcb9ff;
+    --background--:#d5dbff;
+    --color1--:#a2adff;
+    --color2--:#8d84ff;
+    --color3--:#7b75ff;
+}
+
+/*Background Image*/
+body{
+    background: url(img/img.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Arvo', serif;
+}
+
+/*style jumbotron*/
+.jumbotron{
+    background-color: transparent;
+    text-align: center;
+    letter-spacing:2.5px;
+    margin-top: 150px;
+    padding: 10px;
+}
+
+/*style button*/
+.signup{
+    margin-top: 30px;
+}
+
+/*style button la class green es esta*/
+.btn-custom{
+    color: var(--color2--);
+    background-color:transparent;
+    border: 1px solid var(--color2--);
+}
+
+.btn-custom:hover{
+    background-color: var(--color2--);
+}
+
+.btn-custom2{
+    background-color:var(--color1--);
+}
+
+.btn-custom2:hover{
+    background-color:var(--color3--) ;
+}
+
+
+/*Navigation Bar*/
+.navbar-custom{
+    background-color:var(--nav-color--);
+}
+
+.modal-title{
+    font-size: 20px;
+    text-align: center;
+}
+
+.style{
+    justify-content: space-between !important;
+}
+/*style footer*/
+.footer{
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color:var(--nav-color--);
+    padding-top: 10px;
+}
