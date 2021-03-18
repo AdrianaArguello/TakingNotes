@@ -58,8 +58,6 @@ $username = mysqli_real_escape_string($link, $username);
 $email = mysqli_real_escape_string($link, $email);
 $password = mysqli_real_escape_string($link, $password);
 
-$password = hash('sha256', $password);
-
 $sql = "SELECT * FROM users WHERE username = '$username'";
 $result = mysqli_query($link, $sql);
 if(!$result){

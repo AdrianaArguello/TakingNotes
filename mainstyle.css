@@ -11,14 +11,40 @@
     margin-top:120px;
 }
 
-#notePad, #allNotes, #done{
+#notePad, #allNotes, #done, .delete, #folderPad, #allfolders, #rename, .action, #allfiles {
     display: none;
+}
+
+
+.formulario {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    /* background: inherit; */
+    background-color: var(--background--);
+    overflow: hidden;
+    padding: 1em;
+}
+
+.formulario:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
 }
 
 textarea{
     width: 100%;
     max-width: 100%;
-    background: url(img/line.png) repeat-y;
+    background: url(img/line.png) round;
     font: normal 14px verdana;
     line-height: 25px;
     padding: 2px 10px;
@@ -26,6 +52,7 @@ textarea{
     outline: none;
     border-left-width: 20px;
     border-color: var(--color2--);
+    resize: none;
 }
 
 .buttons{
@@ -52,4 +79,18 @@ textarea{
 
 tr{
     cursor: pointer;
+}
+
+.text{
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.timetext{
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

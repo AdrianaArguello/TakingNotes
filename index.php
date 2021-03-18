@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('connection.php');
+
+//logout
+include('logout.php');
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,6 +19,7 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Taking Notes</title>
 </head>
 <body>
@@ -22,14 +31,14 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="index.php">Inicio</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Ayuda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contactanos</a>
-                </li>
+                </li> -->
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item active  my-2 my-lg-0">
@@ -43,13 +52,14 @@
         <h1>Online Notes App</h1>
         <p>Tus notas a donde sea que vayas.</p>
         <p>facil de usar, protege todas tus notas.</p>
-        <button type="button" class= "btn btn-custom signup" data-toggle="modal" data-target="#signupmodal" data-whatever="@mdo">Ingresa, es gratis.</button>
+        <button type="button" class= "btn btn-custom signup" data-toggle="modal" data-target="#loginmodal" data-whatever="@mdo">Ingresa, es gratis.</button>
     </div>
     <div class="footer">
         <div class="container">
             <p>Adriana Arguello, c.i:29.509.496 &copy; Copyright 2021</p>
         </div>
     </div>
+
     <!-- login form -->
     <form method="post" id="loginForm">
     <div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="loginmodal" aria-hidden="true">
@@ -66,22 +76,15 @@
                 <div id="loginmessage"></div>
                 <div class="form-group">
                     <label for="loginemail">Correo</label>
-                    <input type="email" class="form-control" id="loginemail" placeholder="name@example.com" maxlength="20">
+                    <input type="email" name="loginemail" class="form-control" id="loginemail" placeholder="name@example.com" maxlength="50">
                 </div>
                 <div class="form-group">
                     <label for="loginpassword">Contraseña</label>
-                    <input type="password" class="form-control" id="loginpassword" maxlength="20">
-                </div>
-                <div class="d-flex checkbox justify-content-between">
-                    <label for="">
-                        <input type="checkbox" name="remenberme" id="remenberme">
-                        Recordarme
-                    </label>
-                    <a class="pull-right" style="cursor:pointer" data-dismiss="modal" data-target="#forgotmodal" data-toggle="modal">¿olvido la contraseña?</a>
+                    <input type="password" name="loginpassword" class="form-control" id="loginpassword" maxlength="50">
                 </div>
             </div>
             <div class="modal-footer style">
-                <button type="button" class="btn btn-custom2" data-dismiss="modal" data-target="#signupmodal" data-toggle="modal">Registrar</button>
+                <!-- <button type="button" class="btn btn-custom2" data-dismiss="modal" data-target="#signupmodal" data-toggle="modal">Registrar</button> -->
                 <div>
                     <input class="btn btn-custom2" name="login" type="submit" value="Ingresar">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -164,7 +167,8 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js" integrity="sha512-YHQNqPhxuCY2ddskIbDlZfwY6Vx3L3w9WRbyJCY81xpqLmrM6rL2+LocBgeVHwGY9SXYfQWJ+lcEWx1fKS2s8A==" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
